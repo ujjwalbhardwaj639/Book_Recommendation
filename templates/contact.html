@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommender System</title>
+    <script src="https://kit.fontawesome.com/e6b2397d0e.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+        .text-white {
+            color: white;
+
+        }
+        .navbar-brand{
+            padding-left: 15px;
+            color: black;
+
+            
+        }
+        .nav li a{
+            color: black;
+            padding-left: 20px;
+            font-size: 20px;
+            
+            
+        }
+        .nav{
+            padding-left: 800px;
+        }
+        /* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+/* CSS Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*Global Variables */
+
+:root {
+    --sideBGColor: #040b14;
+    --themeColor: #00A78E;
+    --iconBGColor: #2C2F3F;
+    --textColor: #525252;
+    --bgColor: #F7F7F7;
+}
+
+        /* ====================== Contact Section Start ============== */
+        #contact {
+            /*padding: 70px 30px;*/
+            padding-left: 70px;
+            padding-right: 70px;
+            background-color: black
+        }
+
+        #contact .contact-row {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        #contact .contact-row .contact-left {
+            flex-basis: 40%;
+            min-width: 40%;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+            border-radius: 4px;
+            padding: 30px;
+        }
+
+        #contact .contact-row .contact-left .icon-box {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        #contact .contact-row .contact-left .icon-box .icon i {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--themeColor);
+            text-align: center;
+            line-height: 47px;
+            font-size: 20px;
+            color: var(--themeColor);
+            transition: 0.5s;
+        }
+
+        #contact .contact-row .contact-left .icon-box:hover .icon i {
+            background-color: var(--themeColor);
+            color: var(--bgColor);
+        }
+
+        #contact .contact-row .contact-left .icon-box .info h4 {
+            font-size: 20px;
+            color: var(--sideBGColor);
+            font-weight: 600;
+        }
+
+        #contact .contact-row .contact-left .icon-box .info h4+p {
+            color: var(--textColor);
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        #contact .contact-row .contact-right {
+            flex-basis: 60%;
+            min-width: 60%;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+            border-radius: 4px;
+            padding: 30px;
+        }
+
+        #contact .contact-row .contact-right form input,
+        #contact .contact-row .contact-right form textarea {
+            display: block;
+            width: 100%;
+            margin: 25px 0;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--textColor);
+            padding: 10px 20px;
+            border: 2px solid lightgray;
+            border-radius: 2px;
+            outline: none;
+            resize: none;
+            transition: 0.5s;
+        }
+
+        #contact .contact-row .contact-right form input:focus,
+        #contact .contact-row .contact-right form textarea:focus {
+            border: 2px solid var(--themeColor);
+        }
+
+        #contact .contact-row .contact-right form input[type=submit] {
+            background-color: var(--themeColor);
+            color: var(--bgColor);
+            border: 2px solid var(--themeColor);
+            font-size: 17px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width:400px) {
+            #contact .contact-row .contact-left .icon-box .info h4+p {
+                font-size: 14px;
+            }
+        }
+
+        /* Mobile View */
+        @media only screen and (max-width:800px) {
+            #contact {
+                padding: 50px;
+            }
+
+            #contact .contact-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media only screen and (max-width:500px) {
+            #contact {
+                padding: 50px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color:black">
+    <!--#navbar bootstarp ki class hai-->
+    <nav class="navbar" style="background-color:yellow">
+        <a class="navbar-brand"><b>My Book Recommender System</b></a>
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="contact">
+        <h1 class="sub-heading" style="color: white;">Contact</h1>
+        <div class="divider"></div>
+
+        <div class="contact-row">
+            <!--Left Col -->
+            <div class="contact-left">
+                <!-- Email Box-->
+                <div class="icon-box">
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="info">
+                        <h4>Email:</h4>
+                        <p>nishabhardwaj8800@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Call Box-->
+                <div class="icon-box">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="info">
+                        <h4>Call:</h4>
+                        <p>+91 7054720760</p>
+                    </div>
+                </div>
+
+                <!-- Laction Box-->
+                <div class="icon-box">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="info">
+                        <h4>Location:</h4>
+                        <p>Greater Noida</p>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224408.21866130733!2d77.3511835216045!3d28.498260403624425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea64b8f89aef%3A0xec0ccabb5317962e!2sGreater%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1688833282387!5m2!1sen!2sin"
+                        width="100%" height="250" style="border:0;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!--Right Col -->
+            <div class="contact-right">
+                <form action="https://formsubmit.co/5269bd3b9945c17d809c124ae4563e74" method="POST">
+                    <input type="text" name="name" id="name" required placeholder="Your Name">
+                    <input type="email" name="email" id="email" required placeholder="Your Email">
+                    <input type="text" name="subject" id="subject" required placeholder="Subject">
+                    <textarea name="msg" id="msg" rows="9" required placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+    <script src="https://kit.fontawesome.com/e6b2397d0e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
